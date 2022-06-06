@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <h3>Find Your Pokemon</h3>
+  <input type="text" [(ngModel)]="namePokemon" />
+  <br>
+  <button (click)="findPokemonByName()" class="btn btn-primary mt-2">Search</button>
+
+  <h4 *ngIf="pokemonFinded.length > 0">Name Pokemon : {{ pokemonFinded }}</h4>
+  <img src="{{ pokemonImage }}" alt="{{ pokemonFinded }}" />
+  <p *ngIf="pokemonFinded.length > 0">Peso: {{ pokemonWeight }}</p>
+</div>
